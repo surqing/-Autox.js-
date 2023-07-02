@@ -1,0 +1,47 @@
+auto();
+var intervel = 1000;
+
+
+
+// var appName = "大麦";
+// launchApp(appName);
+sleep(3000)
+openConsole();
+
+// 立即预定
+while (true) {
+        var bt1 = text("立即预定").findOnce();
+        if (bt1) {
+            bt1.parent().click();
+            break;
+        }
+        print("等待%d", intervel);
+        sleep(intervel);
+    }
+print("点击预订");
+
+// 选择票档
+while (true) {
+        var bt2 = text("看台980元").findOnce();
+        if (bt2) {
+            bt2.parent().click();
+            break;
+        }
+        print("等待%d", intervel);
+        sleep(intervel);
+    }
+print("选择票档");
+
+// 加票
+click(972, 2121);
+
+// 确定
+while (true) {
+        var bt3 = text("确定").findOnce();
+        if (bt3) {
+            bt3.parent().click();
+            break;
+        }
+        print("等待%d", intervel);
+        sleep(intervel);
+    }
